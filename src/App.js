@@ -1,5 +1,7 @@
 import { HashRouter, Route, Routes } from "react-router-dom";
-import {Menu} from '.Menu.js';
+import {Menu} from './Menu';
+import { Galeria } from "./Gleria";
+import { Info } from "./Info";
 import './App.css';
 
 function App() {
@@ -8,7 +10,8 @@ function App() {
     <Menu />
 
     <Routes>
-      <Route />
+      <Route path="/" element={<Galeria/>}/>
+      <Route path="/Info" element={<Info/>}/>
     </Routes>
     
     

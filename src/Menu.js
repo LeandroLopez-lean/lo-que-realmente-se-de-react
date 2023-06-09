@@ -2,10 +2,9 @@ import React from "react";
 
 function Menu(){
     return(
-        <nav>
-            <ul>
-                
-            </ul>
-        </nav>
+        <h1>Bienvenidos</h1>
+      
     );
 }
+
+export {Menu};
