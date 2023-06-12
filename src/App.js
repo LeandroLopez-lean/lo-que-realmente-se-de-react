@@ -1,6 +1,6 @@
 import { HashRouter, Route, Routes } from "react-router-dom";
 import {Menu} from './Menu';
-import { Galeria } from "./Gleria";
+import { Galeria } from "./Galeria";
 import { Info } from "./Info";
 import './App.css';
 

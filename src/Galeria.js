@@ -2,8 +2,8 @@ import React from "react";
 
 function Galeria(){
     return(
-        <h1>Mi Foto</h1>
-    )
+        <h1>Aqui pondria imagenes del sitio</h1>
+    );
 };
 
 export { Galeria };
