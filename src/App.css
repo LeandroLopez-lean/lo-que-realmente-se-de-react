@@ -1,11 +1,18 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header{
+  background-color: aqua;
+  text-align: center;
+  height: 150px;
 }
+ul{ 
+  list-style-type: none;
+}
+ul li:active {
+  color: red; 
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
