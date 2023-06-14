@@ -1,8 +1,9 @@
 import { HashRouter, Route, Routes } from "react-router-dom";
+import './App.css';
 import {Menu} from './Menu';
 import { Galeria } from "./Galeria";
 import { Info } from "./Info";
-import './App.css';
+import { InfoPage } from "./InfoPage";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Galeria/>}/>
       <Route path="/Info" element={<Info/>}/>
+      <Route path="/Info/:slug" element={<InfoPage/>}/>
     </Routes>
     
     
