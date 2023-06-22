@@ -9,19 +9,20 @@ function Info(){
         
         <ul>
             {infoData.map(post => (
-                <InfoPage post={post} />
+                <InfoPage key={post.slug} post={post} />
             ))}
         </ul>
        </>
     );
 }
 
-function InfoPage({post}) {
+function InfoPage({ post }) {
     return(
         <li>
             <Link to={`/info/${post.slug}`}>{post.title}</Link>
         </li>
     );// no encuentro la forma de hacer estas comillas `` en el teclado  
 }
+
 
 export {Info };

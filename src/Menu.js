@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, Route } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 // con las etiquetas NavLink importadas desde react-router-dom a diferncia de las etiquetas <A> 
 //el navegador no necesita renderizar todo el html

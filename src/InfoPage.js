@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams} from "react-router-dom";
+import { Link, useParams} from "react-router-dom";
 import { infoData } from "./InfoData";
 
 function InfoPage(){
@@ -7,10 +7,12 @@ function InfoPage(){
 
   const infopage = infoData.find(post => post.slug === slug);
 
+    if (!infopage){
+      return <p>Pagina no encontrada</p>
+    }
     return(
       <>
        <h2>{infopage.title}</h2>
-       <p>{infopage.slug}</p>
        <p>{infopage.author}</p>
        <p>{infopage.content}</p>
       </>
