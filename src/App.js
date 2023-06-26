@@ -1,22 +1,31 @@
 import { HashRouter, Route, Routes } from "react-router-dom";
 import './App.css';
-import {Menu} from './Menu';
+import { Menu } from './Menu';
 import { Galeria } from "./Galeria";
 import { Info } from "./Info";
 import { InfoPage } from "./InfoPage";
+import { LoginPage } from "./LoginPage";
+import { LogoutPage } from "./LogoutPage";
+import { ProfilePage } from "./ProfilePage";
 
 function App() {
   return (
    <HashRouter>
     <Menu />
-
+    <body>
     <Routes>
-      <Route path="/" element={<Galeria/>}/>
-      <Route path="/Info" element={<Info/>}/>
-      <Route path="/Info/:slug" element={<InfoPage/>}/>
+      <Route path="/" element={<Galeria/>}/> 
+
+      <Route path="/Info" element={<Info/>}>
+        <Route path=":slug" element={<InfoPage/>}/>
+      </Route>
+      <Route path="/LoginPage" element={<LoginPage/>}/>
+      <Route path="/LogoutPage" element={<LogoutPage/>}/>
+      <Route path="/ProfilePage" element={<ProfilePage/>}/>
+      
       <Route path="*" element={<p>Not found</p>} /> 
     </Routes>
-    
+    </body>
     
    </HashRouter>
   );

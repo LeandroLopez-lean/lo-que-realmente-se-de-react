@@ -1,18 +1,22 @@
 import React from "react";
-import { Link, useParams} from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { infoData } from "./InfoData";
 
 function InfoPage(){
+  const navigate = useNavigate();
   const {slug} = useParams();
 
   const infopage = infoData.find(post => post.slug === slug);
 
-    if (!infopage){
-      return <p>Pagina no encontrada</p>
-    }
+  const returnToInfo = () => {
+    navigate("/Info");
+  };
+  
     return(
       <>
+
        <h2>{infopage.title}</h2>
+       <button onClick={returnToInfo}>volver a Info</button>
        <p>{infopage.author}</p>
        <p>{infopage.content}</p>
       </>

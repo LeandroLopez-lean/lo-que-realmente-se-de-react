@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, } from "react-router-dom";
+import { Link, Outlet, } from "react-router-dom";
 import { infoData } from "./InfoData";
 
 function Info(){
@@ -7,6 +7,7 @@ function Info(){
       <>
         <h1>Iformacion del sitio</h1>
         
+        <Outlet />{/* el Hook Oulet sirve para  */}
         <ul>
             {infoData.map(post => (
                 <InfoPage key={post.slug} post={post} />

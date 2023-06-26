@@ -1,13 +1,18 @@
 .App {
   text-align: center;
 }
+body{
+  background-color: bisque;
+}
 header{
+  margin: 0;
   background-color: aqua;
   text-align: center;
-  height: 150px;
+  height: 200px;
 }
 ul{ 
   list-style-type: none;
+  text-decoration: none;
 }
 ul li:active {
   color: red; 

@@ -11,7 +11,7 @@ function Menu(){
             <nav>
                <ul>
                 {routes.map(route => (
-                 <li>
+                 <li key={route.to}>
                    <NavLink
                    style={({ isActive}) => ({
                      color: isActive ? 'red' : 'blue',
@@ -40,6 +40,18 @@ routes.push({
 routes.push({
   to: "/Info",
   text: 'Info',
+});
+routes.push({
+  to: "/LoginPage",
+  text: 'LoginPage',
+});
+routes.push({
+  to: "/LogoutPage",
+  text: 'LogoutPage',
+});
+routes.push({
+  to: "/ProfilePage",
+  text: 'ProfilePage',
 });
 
 export {Menu};
