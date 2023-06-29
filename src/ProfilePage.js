@@ -1,11 +1,13 @@
 import React from "react";
-//import logo192 from '../public/logo192.png';
+import { useAuth } from "./auth";
 
 function ProfilePage(){
+    const auth = useAuth();
+
     return(
-        <h1>profile</h1>
-        //<image href="logo192.npg"></image>
-    
+        <>
+         <h1>bienvenido, {auth.username}</h1>
+        </>    
     );
 };
 

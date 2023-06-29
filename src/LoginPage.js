@@ -1,12 +1,32 @@
 import React from "react";
-//import logo192 from '../public/logo192.png';
+import { useAuth } from "./auth";
 
 function LoginPage(){
+    const auth = useAuth();
+    const [username, setUsername] = React.useState('')
+
+    const login = (e) => {
+        e.preventDefault();
+        auth.login({username});
+    }
+
     return(
+        <>
         <h1>Registrate</h1>
-        //<image href="logo192.npg"></image>
-    
+
+        <form onSubmit={login}>
+            <label>Escribe tu Nombre de usuario</label>
+            <input 
+              value={username}
+              onChange={e => setUsername(e.target.value)}
+            />
+            <br/>
+            <button type="submit">Entrar</button>
+
+        </form>
+        </>
     );
 };
 
 export { LoginPage };
+
