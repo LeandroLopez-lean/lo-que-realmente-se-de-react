@@ -11,6 +11,7 @@ function Menu(){
             <nav>
                <ul>
                 {routes.map(route =>{
+                  if (route.publicOnly && auth.user) return null;
                   if (route.private && !auth.user) return null;
                                                   
                 return(
@@ -45,7 +46,8 @@ routes.push({
 routes.push({
   to: "/LoginPage",
   text: 'LoginPage',
-  private: false && true,
+  pubicOnly: true,
+  private: false,
 });
 routes.push({
   to: "/LogoutPage",

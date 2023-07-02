@@ -1,13 +1,13 @@
 import React from "react";
-import { useAuth } from "./auth";
+import { AuthRoute, useAuth } from "./auth";
 
-function ProfilePage(){
+function ProfilePage() {
     const auth = useAuth();
 
-    return(
-        <>
-         <h1>bienvenido, {auth.username}</h1>
-        </>    
+    return (
+        <AuthRoute>
+            <h1>bienvenido, {auth.user?.username}</h1>
+        </AuthRoute>
     );
 };
 

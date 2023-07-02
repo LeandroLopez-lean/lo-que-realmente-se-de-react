@@ -6,6 +6,8 @@ function InfoPage(){
   const navigate = useNavigate();
   const {slug} = useParams();
 
+  const auth = useAuth();
+
   const infopage = infoData.find(post => post.slug === slug);
 
   const returnToInfo = () => {
@@ -19,6 +21,9 @@ function InfoPage(){
        <button onClick={returnToInfo}>volver a Info</button>
        <p>{infopage.author}</p>
        <p>{infopage.content}</p>
+       {auth.user?.isAdmin &&(
+        <button>eliminar info</button>
+       )}
       </>
     );
 }

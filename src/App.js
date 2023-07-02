@@ -17,7 +17,6 @@ function App() {
       <body>
       <Routes>
         <Route path="/" element={<Galeria/>}/> 
-
         <Route path="/Info" element={<Info/>}>
           <Route path=":slug" element={<InfoPage/>}/>
         </Route>
